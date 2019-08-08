@@ -40,7 +40,6 @@ public class OPower4ViewPagerBuilder extends RelativeLayout {
             fragment.setLayout(layoutViews.get(i));
             mFragments.add(fragment);
         }
-        initViewPager();
     }
 
     public void needIndicateDots(Boolean b)
@@ -72,14 +71,21 @@ public class OPower4ViewPagerBuilder extends RelativeLayout {
 
     public void onlyWebImages(List<String> urls)
     {
-
     }
 
-    public OPower4ViewPagerBuilder(Context context) {
-        super(context);
+    private void init(Context context) {
         mContext = context;
 
         initView();
+        initViewPager();
+    }
+
+
+    private void initView() {
+
+        mViewPager = findViewById(R.id.viewpager);
+        mViewGroup = (ViewGroup) findViewById(R.id.dot_group);
+        mRadioGroup = (RadioGroup) findViewById(R.id.bottom_navibar);
     }
 
     private void initViewPager() {
@@ -97,11 +103,14 @@ public class OPower4ViewPagerBuilder extends RelativeLayout {
         });
     }
 
-    private void initView() {
+    /**
+     * no need to invoke manually
+     * @param context
+     */
 
-        mViewPager = findViewById(R.id.viewpager);
-        mViewGroup = (ViewGroup) findViewById(R.id.dot_group);
-        mRadioGroup = (RadioGroup) findViewById(R.id.bottom_navibar);
+    public OPower4ViewPagerBuilder(Context context) {
+        super(context);
+
     }
 
     public OPower4ViewPagerBuilder(Context context, AttributeSet attrs) {
