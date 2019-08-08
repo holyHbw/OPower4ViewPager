@@ -1,4 +1,4 @@
-package cn.jhc.www.library;
+package cn.jhc.www.opower4viewpager;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;

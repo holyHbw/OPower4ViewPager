@@ -1,4 +1,4 @@
-package cn.jhc.www.library;
+package cn.jhc.www.opower4viewpager;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -22,9 +22,6 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import cn.jhc.www.library.Fragment4ViewPager;
-import cn.jhc.www.library.R;
 
 /**
  * (^_^) (0_0)
